@@ -2,17 +2,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-sensinact') {
   settings+: {
-    default_repository_permission: "none",
-    members_can_change_project_visibility: false,
-    members_can_change_repo_visibility: false,
-    members_can_create_private_repositories: false,
-    members_can_create_public_repositories: false,
-    members_can_create_teams: false,
-    members_can_delete_repositories: false,
-    packages_containers_internal: false,
-    packages_containers_public: false,
-    plan: "free",
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
@@ -23,8 +12,6 @@ orgs.newOrg('eclipse-sensinact') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -41,8 +28,6 @@ orgs.newOrg('eclipse-sensinact') {
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/eclipse-sensinact/263468/') {
@@ -62,8 +47,6 @@ orgs.newOrg('eclipse-sensinact') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
@@ -74,8 +57,6 @@ orgs.newOrg('eclipse-sensinact') {
       allow_update_branch: false,
       default_branch: "master",
       delete_branch_on_merge: false,
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         enabled: false,
