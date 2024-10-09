@@ -7,6 +7,15 @@ orgs.newOrg('eclipse-sensinact') {
       actions_can_approve_pull_request_reviews: false,
     },
   },
+  webhooks+: [
+    orgs.newOrgWebhook('https://ci.eclipse.org/sensinact/github-webhook/') {
+      content_type: "json",
+      events+: [
+        "pull_request",
+        "push"
+      ],
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('org.eclipse.sensinact') {
       allow_merge_commit: true,
