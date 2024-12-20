@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-sensinact') {
+orgs.newOrg('technology.sensinact', 'eclipse-sensinact') {
   settings+: {
     web_commit_signoff_required: false,
     workflows+: {
