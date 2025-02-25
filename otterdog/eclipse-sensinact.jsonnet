@@ -29,11 +29,6 @@ orgs.newOrg('technology.sensinact', 'eclipse-sensinact') {
     orgs.newRepo('org.eclipse.sensinact.gateway') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      code_scanning_default_languages+: [
-        "javascript",
-        "javascript-typescript",
-        "typescript"
-      ],
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
       delete_branch_on_merge: false,
@@ -62,6 +57,16 @@ orgs.newOrg('technology.sensinact', 'eclipse-sensinact') {
       },
     },
     orgs.newRepo('org.eclipse.sensinact.studioweb') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        enabled: false,
+      },
+    },
+    orgs.newRepo('org.eclipse.sensinact.sensorthings.ui') {
       allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
