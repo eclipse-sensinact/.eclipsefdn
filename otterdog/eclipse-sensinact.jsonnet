@@ -32,6 +32,7 @@ orgs.newOrg('technology.sensinact', 'eclipse-sensinact') {
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
       delete_branch_on_merge: false,
+      has_discussions: true,
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/eclipse-sensinact/263468/') {
