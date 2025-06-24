@@ -30,6 +30,9 @@ orgs.newOrg('technology.sensinact', 'eclipse-sensinact') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_setup_enabled: true,
+      code_scanning_default_languages: [
+        "actions",
+      ],
       default_branch: "master",
       delete_branch_on_merge: false,
       has_discussions: true,
